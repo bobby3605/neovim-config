@@ -6,6 +6,14 @@ return {
       require "configs.conform"
     end,
   },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "clangd",
+      },
+    },
+  },
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {
