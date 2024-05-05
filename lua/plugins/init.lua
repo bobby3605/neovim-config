@@ -11,9 +11,24 @@ return {
     opts = {
       ensure_installed = {
         "clangd",
+        "clang-format",
       },
     },
   },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "configs.null-ls"
+    end,
+  },
+
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {
